@@ -115,6 +115,10 @@ body {
     padding: 5px;
 
     flex: 1;
+
+    span {
+        font-size: smaller;
+    }
 }
 
 .nav {
@@ -175,5 +179,20 @@ body {
             align-self: center;
             padding: 3px;
         }
+    }
+}
+
+.error-header {
+    background: #f8828c;
+    border: 1px solid #C4CED4;
+    padding: 4px;
+    
+    // put text in middle
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .text {
+        font-size: smaller;
     }
 }

@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+    <div class="content-container">
+        <div class="login-container2">
+            <h2>Register..</h2>
+            <span id="register-error" style="color: red;"></span>
+            <form id="register" method="POST">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                <input type="password" name="password" placeholder="repeat password">
+                <input type="text" name="email" placeholder="email">
+                <button type="submit">sign up</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

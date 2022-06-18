@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>{% include 'meta.twig' %}</head>
+    <body>
+        <div class="site">
+            {% block header %}
+                {% include 'header.twig' %}
+            {% endblock %}
+            {% include "noscript.twig" %}
+            <div class="content">
+                {% block content%}
+                    {% block sidebar %}
+                        {% include 'sidebar.twig' %}
+                    {% endblock %}
+
+                    {% block main %}{% endblock %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html> 

@@ -1,6 +1,5 @@
 <?php 
 namespace ridge;
-
 use PDO;
 use PDOException;
 

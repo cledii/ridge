@@ -2,3 +2,5 @@
 /data/
 /etc/ssl/
 /web/dist/
+/web/.sass-cache/
+/web/composer.lock

@@ -1,0 +1,13 @@
+<div class="header">
+    <h1 onclick="redirect('/');">ridge</h1>
+    <div class="search">
+        <input type="text" placeholder="search">
+        <button>search</button>
+    </div>
+</div>
+{% include 'noscript.twig' %}
+{% if info-header %}
+    <div class="info-header">
+        {{ info-header }}
+    </div>
+{% endif %}

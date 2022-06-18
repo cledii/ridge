@@ -1,0 +1,12 @@
+User-agent: Googlebot
+Disallow: /lib/*
+Disallow: /conf/*
+Disallow: /ajax/*
+Disallow: /admin/*
+Disallow: /admin/*
+Disallow: /dist/*
+Disallow: /vendor/*
+Disallow: /scss/*
+
+User-agent: *
+Allow: /
