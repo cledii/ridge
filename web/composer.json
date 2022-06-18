@@ -1,0 +1,14 @@
+{
+    "name": "rgb/ridge",
+    "description": "another vid sharing site",
+    "authors": [
+        {
+            "name": "Hedy88",
+            "email": "hedyhelen2010@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.4",
+        "bramus/router": "^1.6"
+    }
+}
