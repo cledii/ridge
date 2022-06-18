@@ -2,6 +2,7 @@
 namespace ridge;
 require_once ('vendor/autoload.php');
 require_once ('lib/sql.php');
+require_once ('lib/accounts.php');
 
 $router = new \Bramus\Router\Router();
 
@@ -24,8 +25,9 @@ if (file_exists('conf/config.php')) {
     die('config.php not found');
 }
 
-// setup the sql connection
+// setup the libs
 $__db = new ridgeSQL($__config);
+$__accounts = new ridgeAccounts();
 
 // start session
 session_start();
@@ -37,20 +39,6 @@ if (isset($_SESSION['user'])) {
 } else {
     $user = "";
     $isLoggedIn = false;
-}
-
-// login if token is set in cookies
-if(isset($_COOKIE['token'])) {
-    $token = $_COOKIE['token'];
-    $sql = 'SELECT * FROM users WHERE token = :token';
-    $params = [
-        'token' => $token
-    ];
-    $user = $__db->fetch($sql, $params);
-    if ($user) {
-        $_SESSION['user'] = $user;
-        $isLoggedIn = true;
-    }
 }
 
 $twig->addGlobal('isLoggedIn', $isLoggedIn);

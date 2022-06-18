@@ -9,6 +9,5 @@ $__config = (object) [
     ],
     'twig' => (object) [
         'debug' => true
-    ],
-    'debug' => true
+    ]
 ];

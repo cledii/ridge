@@ -22,18 +22,19 @@ $(function() {
         
         // get form data
         let sanitizedData = DOMPurify.sanitize(
-            $('#register').serializeArray()
+            $('#register').serialize()
         );
 
         $.ajax({
             type: 'POST',
-            url: 'req/register',
+            url: 'req/register.php',
 
             data: sanitizedData,
 
             success: function(data) {
                 console.log('ridge.JS: AJAX request successful');
-                
+                console.log(data);
+
                 switch (data.status) {
                     case 'success':
                         console.log('ridge.JS: registration successful');
@@ -43,12 +44,13 @@ $(function() {
                         console.log('ridge.JS: registration failed');
                         $('#register-error').text(data.message);
                         break;
-                    default:
-                        console.log('ridge.JS: registration failed');
-                        $('#register-error').text('Unknown error');
-                        break;
                 }
                 
+            },
+
+            failure: function(data) {
+                console.error('ridge.JS: AJAX request failed');
+                $('#register-error').text('couldn\'t send request, try again later..');
             }
         })
 

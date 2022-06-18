@@ -4,3 +4,4 @@
 /web/dist/
 /web/.sass-cache/
 /web/composer.lock
+/node_modules/
